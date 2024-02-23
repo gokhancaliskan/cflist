@@ -1,13 +1,30 @@
-import Link from "next/link";
-import Layout from "../components/Layout";
+// pages/index.tsx
+import ProductList from "../components/ProductList";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-);
+const HomePage = () => {
+  // Örnek ürünler (API'den alınan verilerle değiştirilmelidir)
+  const sampleProducts = [
+    {
+      _id: "1",
+      name: "Product 1",
+      price: 10,
+      category: "Category 1",
+    },
+    {
+      _id: "2",
+      name: "Product 2",
+      price: 20,
+      category: "Category 2",
+    },
+    // Diğer ürünler...
+  ];
 
-export default IndexPage;
+  return (
+    <div>
+      <h1>Product Management System</h1>
+      <ProductList />
+    </div>
+  );
+};
+
+export default HomePage;
